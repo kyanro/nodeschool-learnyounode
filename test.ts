@@ -3,3 +3,8 @@
  */
 /// <reference path="typings/tsd.d.ts" />
 import fs = require('fs');
+import http = require("http");
+
+function test(abc:string, cde:string):string {
+    return "hoge2";
+}
