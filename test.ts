@@ -1,7 +1,7 @@
 /**
  * Created by ppp on 2016/04/23.
  */
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/main.d.ts" />
 import fs = require('fs');
 import http = require("http");
 
