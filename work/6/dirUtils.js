@@ -4,23 +4,17 @@
  */
 var fs = require("fs");
 var path = require("path");
-var dirUtils;
-(function (dirUtils) {
+function filterDir(dirName, ext, func) {
     "use strict";
-    function filterDir(dirName, ext, func) {
-        var extDot = "." + ext;
-        fs.readdir(dirName, function (err, files) {
-            console.log("dirName:" + dirName);
-            if (err != undefined) {
-                console.log("err:" + err);
-                func(err, undefined);
-                return;
-            }
-            var filterdFiles = files
-                .filter(function (file) { return path.extname(file) === extDot; });
-            console.log("name:" + filterdFiles);
-            func(undefined, filterdFiles);
-        });
-    }
-    dirUtils.filterDir = filterDir;
-})(dirUtils = exports.dirUtils || (exports.dirUtils = {}));
+    var extDot = "." + ext;
+    fs.readdir(dirName, function (err, files) {
+        if (err != undefined) {
+            func(err, undefined);
+            return;
+        }
+        var filterdFiles = files
+            .filter(function (file) { return path.extname(file) === extDot; });
+        func(undefined, filterdFiles);
+    });
+}
+exports.filterDir = filterDir;
