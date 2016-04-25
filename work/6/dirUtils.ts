@@ -4,16 +4,18 @@
 import * as fs from "fs";
 import * as path from "path";
 import ErrnoException = NodeJS.ErrnoException;
-export function filterDir(dirName: string, ext: string, func: (err: ErrnoException, files: string[]) => void): void {
+export namespace dirUtils {
     "use strict";
-    let extDot: string = "." + ext;
-    fs.readdir(dirName, (err: ErrnoException, files: string[]) => {
-        if (err != undefined) {
-            func(err, undefined);
-            return;
-        }
-        let filterdFiles: string[] = files
-            .filter((file: string) => path.extname(file) === extDot);
-        func(undefined, filterdFiles);
-    });
+    export function filterDir(dirName: string, ext: string, func: (err: ErrnoException, files: string[]) => void): void {
+        let extDot: string = "." + ext;
+        fs.readdir(dirName, (err: ErrnoException, files: string[]) => {
+            if (err != undefined) {
+                func(err, undefined);
+                return;
+            }
+            let filterdFiles: string[] = files
+                .filter((file: string) => path.extname(file) === extDot);
+            func(undefined, filterdFiles);
+        });
+    }
 }

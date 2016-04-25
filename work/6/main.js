@@ -8,7 +8,7 @@ var main;
     "use strict";
     var path = process.argv[2];
     var ext = process.argv[3];
-    dirUtils.filterDir(path, ext, function (err, files) {
+    dirUtils.dirUtils.filterDir(path, ext, function (err, files) {
         files.forEach(function (name) { return console.log(name); });
     });
 })(main || (main = {}));
