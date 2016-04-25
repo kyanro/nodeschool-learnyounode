@@ -9,12 +9,15 @@ export namespace dirUtils {
     export function filterDir(dirName: string, ext: string, func: (err: ErrnoException, files: string[]) => void): void {
         let extDot: string = "." + ext;
         fs.readdir(dirName, (err: ErrnoException, files: string[]) => {
-            if (err !== undefined) {
+            console.log("dirName:" + dirName);
+            if (err != undefined) {
+                console.log("err:" + err);
                 func(err, undefined);
                 return;
             }
             let filterdFiles: string[] = files
                 .filter((file: string) => path.extname(file) === extDot);
+            console.log("name:" + filterdFiles);
             func(undefined, filterdFiles);
         });
     }

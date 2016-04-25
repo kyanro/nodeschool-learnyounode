@@ -10,12 +10,15 @@ var dirUtils;
     function filterDir(dirName, ext, func) {
         var extDot = "." + ext;
         fs.readdir(dirName, function (err, files) {
-            if (err !== undefined) {
+            console.log("dirName:" + dirName);
+            if (err != undefined) {
+                console.log("err:" + err);
                 func(err, undefined);
                 return;
             }
             var filterdFiles = files
                 .filter(function (file) { return path.extname(file) === extDot; });
+            console.log("name:" + filterdFiles);
             func(undefined, filterdFiles);
         });
     }
