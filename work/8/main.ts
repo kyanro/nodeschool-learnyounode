@@ -5,6 +5,7 @@ import * as http from "http";
 import {IncomingMessage} from "http";
 
 namespace main {
+    "use strict";
     let url: string = process.argv[2];
     http.get(url, (response: IncomingMessage) => {
         let body: string = "";
