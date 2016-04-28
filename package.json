@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kyanro/nodeschool-learnyounode#readme",
   "dependencies": {
+    "learnyounode": "^3.4.2",
     "tslint": "^3.8.1",
     "typescript": "^1.8.10"
   }
