@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/learnyounode.iml" filepath="$PROJECT_DIR$/.idea/learnyounode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nodeschool-learnyounode.iml" filepath="$PROJECT_DIR$/.idea/nodeschool-learnyounode.iml" />
     </modules>
   </component>
 </project>

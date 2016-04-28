@@ -1,0 +1,23 @@
+{
+  "name": "nodeschool-learnyounode",
+  "version": "1.0.0",
+  "description": "training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyanro/nodeschool-learnyounode.git"
+  },
+  "author": "kyanro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kyanro/nodeschool-learnyounode/issues"
+  },
+  "homepage": "https://github.com/kyanro/nodeschool-learnyounode#readme",
+  "dependencies": {
+    "tslint": "^3.8.1",
+    "typescript": "^1.8.10"
+  }
+}
