@@ -7,9 +7,9 @@ var main;
 (function (main) {
     "use strict";
     var urls = [];
-    urls[0] = process.argv[2];
-    urls[1] = process.argv[3];
-    urls[2] = process.argv[4];
+    urls.push(process.argv[2]);
+    urls.push(process.argv[3]);
+    urls.push(process.argv[4]);
     urls.forEach(function (url, index) {
         http.get(url, function (response) {
             var buf = "";
@@ -19,9 +19,6 @@ var main;
             });
             response.on("end", function () {
                 outputIfFinished(buf, index);
-            });
-            response.on("error", function (error) {
-                // ignore;
             });
         });
     });

@@ -8,9 +8,9 @@ namespace main {
     "use strict";
     import ErrnoException = NodeJS.ErrnoException;
     let urls: string[] = [];
-    urls[0] = process.argv[2];
-    urls[1] = process.argv[3];
-    urls[2] = process.argv[4];
+    urls.push(process.argv[2]);
+    urls.push(process.argv[3]);
+    urls.push(process.argv[4]);
 
     urls.forEach((url: string, index: number) => {
         http.get(url, (response: IncomingMessage) => {
@@ -22,9 +22,9 @@ namespace main {
             response.on("end", () => {
                 outputIfFinished(buf, index);
             });
-            response.on("error", (error: ErrnoException) => {
-                // ignore;
-            });
+            // response.on("error", (error: ErrnoException) => {
+            //     // ignore;
+            // });
         });
     });
 
