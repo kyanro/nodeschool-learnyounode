@@ -5,3 +5,4 @@ function test(abc, cde) {
 function test2(abc, cde) {
     return "hoge2";
 }
+//# sourceMappingURL=test.js.map

@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "sourceMap": true
+  },
   "exclude": [
     "typings/browser",
     "typings/browser/ambient/node/index.d.ts",

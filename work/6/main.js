@@ -12,3 +12,4 @@ var main;
         files.forEach(function (name) { return console.log(name); });
     });
 })(main || (main = {}));
+//# sourceMappingURL=main.js.map

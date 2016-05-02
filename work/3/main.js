@@ -14,3 +14,4 @@ var main;
         .reduce(function (prev, current) { return prev + current; });
     console.log(sum);
 })(main || (main = {}));
+//# sourceMappingURL=main.js.map

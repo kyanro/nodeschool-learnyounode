@@ -6,3 +6,4 @@ var sum = process.argv
     .map(function (numStr) { return Number(numStr); })
     .reduce(function (prev, current) { return prev + current; });
 console.log(sum);
+//# sourceMappingURL=2.js.map

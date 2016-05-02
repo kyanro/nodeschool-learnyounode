@@ -15,3 +15,4 @@ var main;
             .forEach(function (name) { return console.log(name); });
     });
 })(main || (main = {}));
+//# sourceMappingURL=main.js.map

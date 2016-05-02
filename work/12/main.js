@@ -19,3 +19,4 @@ var main;
     });
     server.listen(port);
 })(main || (main = {}));
+//# sourceMappingURL=main.js.map
