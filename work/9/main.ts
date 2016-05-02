@@ -6,7 +6,6 @@ import {IncomingMessage} from "http";
 
 namespace main {
     "use strict";
-    import ErrnoException = NodeJS.ErrnoException;
     let urls: string[] = [];
     urls.push(process.argv[2]);
     urls.push(process.argv[3]);
@@ -22,9 +21,6 @@ namespace main {
             response.on("end", () => {
                 outputIfFinished(buf, index);
             });
-            // response.on("error", (error: ErrnoException) => {
-            //     // ignore;
-            // });
         });
     });
 
